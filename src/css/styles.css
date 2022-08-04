@@ -18,3 +18,39 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+form {
+  margin: 3rem 0 3rem 0;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.125);
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-margin-reset {
+  margin-top: -1rem;
+}
+.country-list {
+  display: flex;
+  flex-direction: column;
+}
+.country-list_item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
