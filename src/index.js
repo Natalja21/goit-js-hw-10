@@ -45,7 +45,6 @@ function searchCountry(countries) {
   if (countries.length > 10) {
     Notify.info("Too many matches found.Please enter a more specific name.")
   }
-
 }
 
 function renderCounrtiesInfo(countries) {
@@ -56,13 +55,13 @@ function renderCounrtiesInfo(countries) {
       </li>`;
   })
     .join('');
-
 }
+
 function creatMarkupCountryList(countries) {
   const renderCountries = renderCounrtiesInfo(countries);
   refs.countryList.insertAdjacentHTML('beforeend', renderCountries)
-
 }
+
 function renderCounrtryInfo(countries) {
   const country = countries[0];
   const languages = Object.values(country.languages).join(", ");
@@ -74,8 +73,8 @@ function renderCounrtryInfo(countries) {
   <li>languages : ${languages}</li>
   </ul>
   `
-
 }
+
 function createMarkupCounrtryInfo(countries) {
   const renderCountry = renderCounrtryInfo(countries)
   refs.countryInfo.insertAdjacentHTML('beforeend', renderCountry)
