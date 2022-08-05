@@ -50,8 +50,8 @@ function searchCountry(countries) {
 function renderCounrtiesInfo(countries) {
   return countries.map(({ flags: { svg }, name: { official } }) => {
     return `<li class= country-list_item>
-      <img src="${svg}" alt= "flag" width="20" height="20"/>
-      <p>${official}</p>
+      <img src="${svg}" alt= "flag" width="40" height="40"/>
+      <p class = country-list_subtitle>${official}</p>
       </li>`;
   })
     .join('');
@@ -65,12 +65,12 @@ function creatMarkupCountryList(countries) {
 function renderCounrtryInfo(countries) {
   const country = countries[0];
   const languages = Object.values(country.languages).join(", ");
-  return `<div class= country-list_item><img src="${country.flags.svg}" alt = "flags country" width="22" height="20"/>
-  <p>${country.name.official}</p></div>
-  <ul class="country-list">
-  <li>Capital : ${country.capital}</li>
-  <li>Population : ${country.population}</li>
-  <li>languages : ${languages}</li>
+  return `<div class= country-list_title><img src="${country.flags.svg}" alt = "flags country" width="4%" height="4%"/>
+  <p class = country-info_subtitle>${country.name.official}</p></div>
+  <ul class="country-info_list">
+  <li><span class="country-info_span">Capital:</span>${country.capital}</li>
+  <li><span class="country-info_span">Population:</span>${country.population}</li>
+  <li><span class="country-info_span">languages:</span>${languages}</li>
   </ul>
   `
 }
